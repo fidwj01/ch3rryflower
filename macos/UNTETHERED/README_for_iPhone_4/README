@@ -7,17 +7,19 @@ iPhone 4 only
 *Launch terminal and change directory to ch3rryflower_vX.X/macos ("cd" command).
 cd ch3rryflower_vX.X/macos
 
-1) make CFW
-./flower <in> <out> -d <device> -i <version> -t <base ipsw> [-b <bootargs>]
+1) make iBoot
+Create a patched iBoot.
+[USE_SCRIPT]
+./make_iBoot.sh <ipsw> -iv [iv] -k [key]
 
-*example 1: iOS 6.1.3
-./flower iPhone3,1_6.1.3_10B329_Restore.ipsw iPhone3,1_6.1.3_10B329_Custom.ipsw -d iPhone3,1 -i 10B329 -t iPhone3,1_7.1.2_11D257_Restore.ipsw
+2) make CFW
+./cherry <ipsw> custom.ipsw -bbupdate -memory -derebusantiquis <base-ipsw> iBoot
+base-ipsw is required for iBoot exploits. Select the version with SHSH and the presence of De Rebus Antiquis. (iOS 7.1.2 FW)
 
-*example 2: iOS 4.3.5 & enable verbose boot
-./flower iPhone3,1_4.3.5_8L1_Restore.ipsw iPhone3,1_4.3.5_8L1_Custom.ipsw -d iPhone3,1 -i 8L1 -t iPhone3,1_7.1.2_11D257_Restore.ipsw -b "-v"
-./ios4fix iPhone3,1_4.3.5_8L1_Custom.ipsw -t iPhone3,1_4.3.5_8L1_Restore.ipsw iPhone3,1_7.1.2_11D257_Restore.ipsw
+if you selected ios 4, The following modification need to be made:
+./ios4fix custom.ipsw -t ios4original.ipsw iPhone3,1_7.1.2_11D257_Restore.ipsw
 
-2) Restore  
+3) Restore  
 First, put in device to dfu mode.
 Then put into pwned dfu mode.
 

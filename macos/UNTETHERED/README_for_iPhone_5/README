@@ -19,7 +19,7 @@ ex:(for iOS 7.1.2)
 
 2) make CFW
 ./cherry <ipsw> custom.ipsw -bbupdate -memory -derebusantiquis <base-ipsw> iBoot
-base-ipsw is required for iBoot exploits. Select the version with SHSH and the presence of De Rebus Antiquis. (Currently iOS 7.1.2 FW only)
+base-ipsw is required for iBoot exploits. Select the version with SHSH and the presence of De Rebus Antiquis.
 
 3) restore
 Replace the target iOS 7 SHSH with the version you want to restore.
