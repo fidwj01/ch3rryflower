@@ -23,41 +23,6 @@
 			<key>TypeFlag</key>
 			<integer>8</integer>
 		</dict>
-		<key>RestoreDeviceTree</key>
-		<dict>
-			<key>DecryptPath</key>
-			<string>Downgrade/DeviceTree.n42ap.img3</string>
-			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/DeviceTree.n42ap.img3</string>
-			<key>IV</key>
-			<string>1f42a9c77b6722cab534458c036f56f5</string>
-			<key>Key</key>
-			<string>df2e0bec4b4c2a6e40216368d08701c8fa13540c4cbdf8db00bae494eb21a144</string>
-		</dict>
-		<key>RestoreKernelCache</key>
-		<dict>
-			<key>DecryptPath</key>
-			<string>Downgrade/kernelcache.release.n42</string>
-			<key>File</key>
-			<string>kernelcache.release.n42</string>
-			<key>IV</key>
-			<string>6f666ce6f90b6b4d3e9fc34fdff99069</string>
-			<key>Key</key>
-			<string>24675cf827c7f31b39b18c651969347fcff825de69bb109a7bade20b7d220f4a</string>
-			<key>TypeFlag</key>
-			<integer>4</integer>
-		</dict>
-		<key>RestoreLogo</key>
-		<dict>
-			<key>DecryptPath</key>
-			<string>Downgrade/applelogo@2x~iphone.s5l8950x.img3</string>
-			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/applelogo@2x~iphone.s5l8950x.img3</string>
-			<key>IV</key>
-			<string>3f21235489e5c5e6092f65c4b63e054e</string>
-			<key>Key</key>
-			<string>6f175ccf6e6c980ab6d6eb7a80622fde81464a65632b5c1b289e66c52ecec567</string>
-		</dict>
 		<key>iBEC</key>
 		<dict>
 			<key>Decrypt</key>

@@ -68,28 +68,6 @@
 			<key>TypeFlag</key>
 			<integer>8</integer>
 		</dict>
-		<key>RestoreDeviceTree</key>
-		<dict>
-			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/DeviceTree.n42ap.img3</string>
-			<key>Key</key>
-			<string>6ed29ef3f496b4d766cc73d2c4ab8deb37af0aec2b6bee9ec9d41edf4dcdad57</string>
-			<key>DecryptPath</key>
-			<string>Downgrade/DeviceTree.n42ap.img3</string>
-			<key>IV</key>
-			<string>1adb3f1311009f60038141037721516f</string>
-		</dict>
-		<key>RestoreLogo</key>
-		<dict>
-			<key>File</key>
-			<string>Firmware/all_flash/all_flash.n42ap.production/applelogo@2x.s5l8950x.img3</string>
-			<key>Key</key>
-			<string>db6eed02d1c5f5be50692e8fd5905b12f435dbe2a349d2afa7548e3667ec6e7b</string>
-			<key>DecryptPath</key>
-			<string>Downgrade/applelogo@2x.s5l8950x.img3</string>
-			<key>IV</key>
-			<string>e3bc620448124e5853d679496b7fa43d</string>
-		</dict>
 		<key>Restore Ramdisk</key>
 		<dict>
 			<key>File</key>
@@ -102,19 +80,6 @@
 			<integer>8</integer>
 			<key>IV</key>
 			<string>10e7926c1cce7bbdfb0ec956ef4c1768</string>
-		</dict>
-		<key>RestoreKernelCache</key>
-		<dict>
-			<key>File</key>
-			<string>kernelcache.release.n42</string>
-			<key>Key</key>
-			<string>05727b3d40dc0fc6e309e67f737e26031591a9e54adf62b1d74a4a75eaccf9fb</string>
-			<key>DecryptPath</key>
-			<string>Downgrade/kernelcache.release.n42</string>
-			<key>TypeFlag</key>
-			<integer>4</integer>
-			<key>IV</key>
-			<string>360be822488daef816a2e78ad9119c9f</string>
 		</dict>
 	</dict>
 	<key>RootFilesystemKey</key>

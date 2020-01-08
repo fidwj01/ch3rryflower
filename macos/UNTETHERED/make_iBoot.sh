@@ -1,7 +1,5 @@
 #!/bin/bash
 
-device=$(unzip -l $1 | grep Firmware/dfu/iBSS. | cut -d '.' -f 2)
-
 if [ $# != 5 ]; then
 echo "./make_iBoot.sh <ipsw(target)> -iv [iBoot-iv] -k [iBoot-key]"
 exit
@@ -12,6 +10,7 @@ echo "bad args"
 exit
 fi
 
+device=$(unzip -l $1 | grep Firmware/dfu/iBSS. | cut -d '.' -f 2)
 
 mkdir iboottmp/
 cd iboottmp/
