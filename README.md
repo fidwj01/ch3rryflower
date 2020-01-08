@@ -19,7 +19,7 @@ ch3rryflower - v1.3 beta 4-2 by @dora2_yuruyi
 - Untethered
 	- iPhone3,1
 	- iPhone5,2 (Require iOS 7.x SHSH)
-	- iPhone5,3 (Require iOS 7.1.1 SHSH)
+	- iPhone5,3 (Require iOS 7.1.x SHSH)
 - Tethered
 	- iPhone5,2
 	- iPhone5,4
