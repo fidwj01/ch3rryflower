@@ -1,0 +1,59 @@
+ch3rryflower - v1.3b4 by @dora2_yuruyi
+iPhone 4 only
+
+** How to use (Do not ask questions on Twitter.)
+
+#1st, Create iBoot
+*** shell script start (for iPhone3,1 6.1.2 [11B146]) ***
+
+mkdir tmp
+cd tmp
+
+unzip -j ../iPhone3,1_6.1.2_10B146_Restore.ipsw Firmware/all_flash/all_flash*/iBoot*
+unzip -j ../iPhone3,1_6.1.2_10B146_Restore.ipsw Firmware/dfu/iBEC*
+
+../bin/xpwntool iBoot.n90ap.RELEASE.img3 iBoot.n90ap.RELEASE.dec -iv c939629e3473fdb67deae0c45582506d -k cbcd007712618cb6ab3be147f0317e22e7cceadb344e99ea1a076ef235c2c534
+
+../bin/iBoot32Patcher iBoot.n90ap.RELEASE.dec PwnediBoot --rsa --boot-partition
+../bin/xpwntool PwnediBoot iBoot -t iBEC.n90ap.RELEASE.dfu
+
+mv -v iBoot ..
+
+cd ..
+rm -r tmp
+*** shell script end ***
+
+- It is also possible to inject custom boot-args.
+-+ [bootargs_list]
+"-v"                        : enable verbose boot
+"cs_enforcement_disable=1"  : disable code signing enforcement (with --debug flag)
+"amfi_get_out_of_my_way=1"  : disable amfi (with --debug flag)
+etc ...
+- If you want to inject boot-args, change the iBoot32Patcher part as follows.
+
+../bin/iBoot32Patcher iBoot.n90ap.RELEASE.dec PwnediBoot --rsa [--debug] --boot-partition -b [*custom_bootargs]
+
+#2nd, Create CFW
+Use cherry (modified xpwn) to create CFW with De Rebus Antiquis applied.
+
+./cherry iPhone3,1_6.1.2_10B146_Restore.ipsw iPhone3,1_6.1.2_10B146_Custom.ipsw -derebusantiquis iPhone3,1_7.1.2_11D257_Restore.ipsw iBoot -memory
+
+*iPhone3,1_6.1.2_10B146_Restore.ipsw: iOS firmware you want to untethered downgrade. Must be the same as used in part 1.
+*iPhone3,1_7.1.2_11D257_Restore.ipsw: iOS firmware that trigger iBoot exploit. It must be iOS 7.x version with SHSH.
+*iBoot: pwnediBoot file created in part-1.
+
+#3rd, restore cfw
+First, put in device to dfu mode.
+Then put into pwned dfu mode. 
+./pwnedDFU -p
+
+It will then receive iOS 7.1.2 SHSH and restore iOS 6.1.2 CFW.
+
+./idevicerestore -t iPhone3,1_7.1.2_11D257_Restore.ipsw
+mv -v shsh/[ecid]-[device]-7.1.2.shsh shsh/[ecid]-[device]-6.1.2.shsh
+./idevicerestore -e -w iPhone3,1_6.1.2_10B146_Custom.ipsw
+
+
+Yes, iPhone 4 can get 7.1.2 SHSH from apple. For other devices, it is necessary to prepare in advance.
+
+fun :)

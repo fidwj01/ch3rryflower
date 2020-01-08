@@ -1,0 +1,44 @@
+ch3rryflower - v1.3b4 by @dora2_yuruyi
+iPhone 4 only
+
+#How to use  
+
+0) change directory to ch3rryflower (ver, X.X) via terminal
+*Launch terminal and change directory to ch3rryflower_vX.X/macos ("cd" command).
+cd ch3rryflower_vX.X/macos
+
+1) make CFW
+./flower <in> <out> -d <device> -i <version> -t <base ipsw> [-b <bootargs>]
+
+*example 1: iOS 6.1.3
+./flower iPhone3,1_6.1.3_10B329_Restore.ipsw iPhone3,1_6.1.3_10B329_Custom.ipsw -d iPhone3,1 -i 10B329 -t iPhone3,1_7.1.2_11D257_Restore.ipsw
+
+*example 2: iOS 4.3.5 & enable verbose boot
+./flower iPhone3,1_4.3.5_8L1_Restore.ipsw iPhone3,1_4.3.5_8L1_Custom.ipsw -d iPhone3,1 -i 8L1 -t iPhone3,1_7.1.2_11D257_Restore.ipsw -b "-v"
+./ios4fix iPhone3,1_4.3.5_8L1_Custom.ipsw -t iPhone3,1_4.3.5_8L1_Restore.ipsw iPhone3,1_7.1.2_11D257_Restore.ipsw
+
+2) Restore  
+First, put in device to dfu mode.
+Then put into pwned dfu mode.
+
+./pwnedDFU -p
+
+It will then receive iOS 7.1.2 SHSH and restore iOS 6.1.3 CFW.
+
+--- command start ---
+./idevicerestore -t iPhone3,1_7.1.2_11D257_Restore.ipsw
+mv -v shsh/{ecid}-{device}-7.1.2.shsh shsh/{ecid}-{device}-6.1.3.shsh
+./idevicerestore -e -w iPhone3,1_6.1.3_10B329_Custom.ipsw
+--- command end ---
+
+(X) Remove iBoot exploit
+put in device to dfu mode.
+
+--- command start ---
+cd remove
+./disable
+--- command end ---
+
+
+ver. 1.2.2 [5]
+Update: 2019-10-21

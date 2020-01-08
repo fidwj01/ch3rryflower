@@ -1,0 +1,62 @@
+ch3rryflower - v1.3b4 by @dora2_yuruyi
+iPhone 4 only
+
+** How to use (Do not ask questions on Twitter.)
+***For iOS 4 or lower, the system is different from iOS 5 or later, so fine tuning is required. I plan to make it easy.
+
+#1st make pwnediBoot
+- Create pwnediBoot. This is used to boot the desired iOS.
+
+*** shell script start (for iPhone3,1 4.3.5 [8L1]) ***
+mkdir tmp
+cd tmp
+
+unzip -j ../iPhone3,1_4.3.5_8L1_Restore.ipsw Firmware/all_flash/all_flash*/iBoot*
+unzip -j ../iPhone3,1_4.3.5_8L1_Restore.ipsw Firmware/dfu/iBEC*
+
+../bin/xpwntool iBoot.n90ap.RELEASE.img3 iBoot.n90ap.RELEASE.dec -iv 986032eecd861c37ca2a86b6496a3c0d -k b4e300c54a9dd2e648ead50794e9bf2205a489c310a1c70a9fae687368229468
+
+../bin/iBoot32Patcher iBoot.n90ap.RELEASE.dec PwnediBoot --rsa --logo4 --boot-partition
+../bin/xpwntool PwnediBoot iBoot -t iBEC.n90ap.RELEASE.dfu
+
+mv -v iBoot ..
+cd ..
+rm -r tmp
+*** shell script end ***
+
+- It is also possible to inject custom boot-args.
+-+ [bootargs_list]
+    "-v"                        : enable verbose boot
+    "cs_enforcement_disable=1"  : disable code signing enforcement
+    "amfi_get_out_of_my_way=1"  : disable amfi
+    etc ...
+- If you want to inject boot-args, change the iBoot32Patcher part as follows.
+
+../bin/iBoot32Patcher iBoot.n90ap.RELEASE.dec PwnediBoot --rsa --debug --logo4 --boot-partition -b [*custom_bootargs]
+
+
+#2nd, Create CFW
+- Use cherry (modified xpwn) to create CFW with De Rebus Antiquis applied.
+
+./cherry iPhone3,1_4.3.5_8L1_Restore.ipsw iPhone3,1_4.3.5_8L1_Custom.ipsw -derebusantiquis iPhone3,1_7.1.2_11D257_Restore.ipsw iBoot -memory
+
+*iPhone3,1_4.3.5_8L1_Restore.ipsw: iOS firmware you want to untethered downgrade. Must be the same as used in part 1.
+*iPhone3,1_7.1.2_11D257_Restore.ipsw: iOS firmware that trigger iBoot exploit. It must be iOS 7.x version with SHSH.
+*iBoot: pwnediBoot created in part-1.
+
+#3rd Inject NOR
+- Some fixes are needed for iOS 4.
+run shell script
+./ios4fix
+
+#4th, restore cfw
+First, put in device to dfu mode.
+Then put into pwned dfu mode.
+./pwnedDFU -p
+
+It will then receive iOS 7.1.2 SHSH and restore iOS 4.3.5 CFW.
+
+./idevicerestore -t iPhone3,1_7.1.2_11D257_Restore.ipsw
+mv -v shsh/ecid-device-7.1.2.shsh shsh/ecid-device-4.3.5.shsh
+./idevicerestore -e -w iPhone3,1_4.3.5_8L1_Custom.ipsw
+

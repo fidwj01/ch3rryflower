@@ -1,0 +1,9 @@
+**Important notes about blobs acquired at the downgrade party in January 2018**
+
+If you use my tool to restore with shsh2 using obtained by tsschecker, the baseband update process will be broken. These affected users are some of the users who acquired iOS 7 blobs at the downgrade party in January 2018.
+
+*These users will need to make the following modifications when using my tool.
+	0, Duplicate shsh2.
+	1, Change extension from ".shsh2" to ".plist".
+	2, Delete all items except "APTicket" and "LLB" related.
+	3, Change the extension back to ".shsh".
