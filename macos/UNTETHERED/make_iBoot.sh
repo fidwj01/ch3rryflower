@@ -1,6 +1,6 @@
 #!/bin/bash
 
-device="n42ap"
+device=$(unzip -l $1 | grep Firmware/dfu/iBSS. | cut -d '.' -f 2)
 
 if [ $# != 5 ]; then
 echo "./make_iBoot.sh <ipsw(target)> -iv [iBoot-iv] -k [iBoot-key]"
