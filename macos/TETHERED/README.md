@@ -27,18 +27,6 @@ rm iBSS*
 ```
 ./pwnedDFU -p
 ```
-*log*
-```
-*** based on checkm8 exploit by axi0mX
-**  pwned dfu based on belladonna by synackuk
-**  improved by dora2_yururi
-Grooming heap
-preparing for overwrite
-overwriting task struct
-uploading payload
-executing payload
-device is now in pwned DFU mode
-```
 
 - Enter device to iBSS (soft) DFU mode
 ```
