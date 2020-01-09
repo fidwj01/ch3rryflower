@@ -130,9 +130,16 @@ bin/xpwntool iBSS* softdfu
 - Delete all items except "APTicket" and "LLB" related.
 - Change the extension back to ".shsh".
 
+# How to add device or version support
+- To add device support, you need to create an exploit. Exploit can be developed by using xerub's iloader [1].
+- There are two ways to add already supported device versions.
+    - For iOS 7 and below, just add the ch3rryflower-specific options to the Odysseus Bundle to info.plist. See the existing bundle for details.
+    - For iOS 8 or later, Odysseus kernel patch cannot be used because it is incomplete. Sandbox problem. An easy way is to patch sandbox mac policies to zero [3]. Add the tfp0 patch to the Odysseus patch and run sbpatcher [4] before applying the exploit.
+
 # References
 [1] https://xerub.github.io/ios/iboot/2018/05/10/de-rebus-antiquis.html  
 [2] https://github.com/dora2-iOS/iloader/blob/master/iPhone5,2/dora_yururi/iboot_untether.S  
-
+[3] https://www.blackhat.com/docs/asia-17/materials/asia-17-Bazaliy-Fried-Apples-Jailbreak-DIY.pdf
+[4] https://github.com/dora2-iOS/sbpatcher32
 # Thanks to
 See README on top page
