@@ -39,6 +39,11 @@ by @dora2_yuruyi
     ./make_iBoot.sh <ipsw> -iv [iv] -k [key]
     ```
     
+    - iOS 9/10
+    ```
+    ./make_iBoot.sh <ipsw> -iv [iv] -k [key] -ios9
+    ```
+    
 ## 2, create CFW
 - Create CFW. 
 - *-bbupdate* is not required for iPhone 4.
