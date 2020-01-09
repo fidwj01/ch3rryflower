@@ -5,9 +5,23 @@ by @dora2_yuruyi
 - This is an untethered downgrade CLI tool for 32-bit iOS devices with iOS 7 SHSH blobs using CFW.  
 
 ## Supported devices
-- iPhone 4 (iPhone3,1)  
-- iPhone 5 (iPhone5,2)  *Require iOS 7.x SHSH  
-- iPhone 5c (iPhone5,3) *Require iOS 7.1.x SHSH  
+- iPhone 4 [iPhone3,1]  
+- iPhone 5 [iPhone5,2]  *Require iOS 7.x SHSH  
+- iPhone 5c [iPhone5,3] *Require iOS 7.1.x SHSH  
+
+# Supported version  
+- iPhone 4 [iPhone3,1]  
+    - iOS 4: 4.3.3, 4.3.5  
+    - iOS 5: 5.1.1  
+    - iOS 6: 6.1.2, 6.1.3  
+    - iOS 7: 7.0, 7.0.2, 7.0.3, 7.0.4, 7.0.6, 7.1, 7.1.1, 7.1.2  
+- iPhone 5 [iPhone5,2]  
+    - iOS 6: 6.1.2, 6.1.4  
+    - iOS 7: 7.0, 7.0.2, 7.0.3, 7.0.4, 7.0.6, 7.1, 7.1.1, 7.1.2  
+    - iOS 8: 8.0.2  
+    - iOS 9: 9.0.2  
+- iPhone 5c [iPhone5,3]  
+    - iOS 7: 7.1, 7.1.1, 7.1.2  
 
 ## Supported environment
 - macOS 10.13 or later  
