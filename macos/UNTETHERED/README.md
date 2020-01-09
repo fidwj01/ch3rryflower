@@ -16,16 +16,16 @@ by @dora2_yuruyi
 ## Vulnerabilities to use
 ### BootROM
 - limera1n
-- BootROM exploit for run unsigned code via USB by geohot (for iPhone 4)  
+    - BootROM exploit for run unsigned code via USB by geohot (for iPhone 4)  
 - checkm8
-- BootROM exploit for run unsigned code via USB by axi0mX  (for iPhone 4s or later)  
+    - BootROM exploit for run unsigned code via USB by axi0mX  (for iPhone 4s or later)  
 
 ### iBoot
-- De Rebus Antiquis [1]
-- iBoot exploit that allows arbitrary code execution on the device untether by xerub  
+- De Rebus Antiquis
+    - iBoot exploit that allows arbitrary code execution on the device untether by xerub  
 
 ## Why require iOS 7 SHSH?
-- This is based on xerub's De Rebus Antiquis. This shows that iOS 7 iBoot can be applied to downgrade by properly exploiting it. Therefore, iOS 7 LLB and iBoot must be signed by apple.
+- This is based on xerub's De Rebus Antiquis [1]. This shows that iOS 7 iBoot can be applied to downgrade by properly exploiting it. Therefore, iOS 7 LLB and iBoot must be signed by apple.
 - After triggering the exploit, the shellcode, including the untethered iBoot patch added by me [2], runs and initiates an unsigned boot.
 
 
