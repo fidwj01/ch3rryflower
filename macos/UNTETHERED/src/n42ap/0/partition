@@ -2,6 +2,10 @@
 # for iOS 6 - 7
 kpatch=0 #iOS7_remount_rootfs
 
+if [ -e "/sb" ]; then
+/sb
+fi
+
 ### Mount Root/Data-FS
 mount_hfs /dev/disk0s1s1 /mnt1
 mount_hfs /dev/disk0s1s2 /mnt1/private/var

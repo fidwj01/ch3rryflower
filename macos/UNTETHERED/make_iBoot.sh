@@ -10,7 +10,8 @@ echo "bad args"
 exit
 fi
 
-device=$(unzip -l $1 | grep Firmware/dfu/iBSS. | cut -d '.' -f 2)
+device=$(unzip -l $1 | grep .production/manifest | cut -d '.' -f 2)
+echo $device
 
 mkdir iboottmp/
 cd iboottmp/
