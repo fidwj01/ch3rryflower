@@ -71,3 +71,4 @@ by @dora2_yuruyi
 - planetbeing for xpwn
 - dayt0n by Odysseus
 - synackuk for n1ghtshade (belladonna)
+- FriedAppleTeam for Jailbreak DIY
