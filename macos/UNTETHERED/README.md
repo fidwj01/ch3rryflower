@@ -52,6 +52,12 @@ by @dora2_yuruyi
     ./cherry <ipsw> custom.ipsw -bbupdate -memory -derebusantiquis <base-ipsw> iBoot
     ```
 
+### ios4fix
+- If using iOS 4, the following patches are required. Please be sure to execute.
+```
+./ios4fix <iOS 4 ipsw [custom]> -t <iOS 4 ipsw [orig]> <iOS 7.1.2 ipsw>
+```
+
 ## 3, restore
 - Replace the target iOS 7 SHSH with the version you want to restore.  
 - Before executing the following command, rename the iOS 7 SHSH in the shsh directory as follows  
