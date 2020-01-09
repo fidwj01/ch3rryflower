@@ -139,7 +139,7 @@ bin/xpwntool iBSS* softdfu
 # References
 [1] https://xerub.github.io/ios/iboot/2018/05/10/de-rebus-antiquis.html  
 [2] https://github.com/dora2-iOS/iloader/blob/master/iPhone5,2/dora_yururi/iboot_untether.S  
-[3] https://www.blackhat.com/docs/asia-17/materials/asia-17-Bazaliy-Fried-Apples-Jailbreak-DIY.pdf
-[4] https://github.com/dora2-iOS/sbpatcher32
+[3] https://www.blackhat.com/docs/asia-17/materials/asia-17-Bazaliy-Fried-Apples-Jailbreak-DIY.pdf  
+[4] https://github.com/dora2-iOS/sbpatcher32  
 # Thanks to
 See README on top page
