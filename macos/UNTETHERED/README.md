@@ -58,9 +58,9 @@ by @dora2_yuruyi
 **shsh/[ECID]-[device]-[ios-version]-[build].shsh**  
 (for iPhone 4: shsh/[ECID]-[device]-[ios-version].shsh)  
 *example*  
-```
-mv -v shsh/123456789-iPhone5,2-7.0.4.shsh shsh/123456789-iPhone5,2-6.1.2-10B146.shsh
-```
+    ```
+    mv -v shsh/123456789-iPhone5,2-7.0.4.shsh shsh/123456789-iPhone5,2-6.1.2-10B146.shsh
+    ```
 
 - Put the device in DFU mode, and enter pwned DFU mode.
 ```
