@@ -1,4 +1,6 @@
-ch3rryflower - v1.3 beta 4-2 by @dora2_yuruyi
+# ch3rryflower - v1.3 beta 4-2
+by @dora2_yuruyi
+
 
 # What tool is this?
 - This is a CLI tool to restore/downgrade 32-bit iOS device with CFW.
