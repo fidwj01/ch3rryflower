@@ -53,7 +53,17 @@ by @dora2_yuruyi
     ./make_iBoot.sh <ipsw> -iv [iv] -k [key]
     ```
     
-    - iOS 9/10
+    - *iOS 4.3.3*
+    ```
+    ./make_iBoot.sh <ipsw> -iv [iv] -k [key] -ios433
+    ```
+    
+    - *iOS 4.3.5*
+    ```
+    ./make_iBoot.sh <ipsw> -iv [iv] -k [key] -ios4
+    ```
+    
+    - *iOS 9/10*
     ```
     ./make_iBoot.sh <ipsw> -iv [iv] -k [key] -ios9
     ```
