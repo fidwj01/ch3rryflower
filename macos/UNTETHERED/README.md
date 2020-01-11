@@ -22,7 +22,8 @@ by @dora2_yuruyi
     - iOS 9: 9.0.2, 9.3.4  
 - iPhone 5c [iPhone5,3]  
     - iOS 7: 7.1, 7.1.1, 7.1.2  
-
+    - iOS 9: 9.3.4  
+    
 ## Supported environment
 - macOS 10.13 or later  
 - ubuntu 18.04 LTS (untested, checkm8 on iPhone 5 probably won't work.)  
