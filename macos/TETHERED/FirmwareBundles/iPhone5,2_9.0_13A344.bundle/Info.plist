@@ -34,7 +34,7 @@
 			<key>Key</key>
 			<string>85cb205cd551442e629ffb267708c5eafe5642c845d46becf7dc5ef5f6244ca4</string>
 			<key>Patch</key>
-			<string>iBEC.n42ap.RELEASE.patch</string>
+			<string>iBEC.n42.RELEASE.patch</string>
 			<key>TypeFlag</key>
 			<integer>8</integer>
 		</dict>
@@ -49,7 +49,7 @@
 			<key>Key</key>
 			<string>a28a482dedea0079f79b19c0b77b8eca2f64371fed61bdd726dc6c5af6560758</string>
 			<key>Patch</key>
-			<string>iBSS.n42ap.RELEASE.patch</string>
+			<string>iBSS.n42.RELEASE.patch</string>
 			<key>TypeFlag</key>
 			<integer>8</integer>
 		</dict>
