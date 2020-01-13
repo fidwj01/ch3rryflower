@@ -6,9 +6,9 @@ ch3rryflower - v1.3b4 by @dora2_yuruyi
 ./cherry <orininal-ipsw> custom.ipsw -bbupdate -memory -tethered
 
 2, fake SHSHの取得
-./fakeshsh.sh
+./fakeshsh.sh [device]
 デバイスをDFU modeに。idevicerestoreを使用してfake SHSH を取得
-./idevicerestore -t iPhone5,2_fake.ipsw
+./idevicerestore -t [fakeipsw]
 
 3, 復元
 3-1, デバイスをpwned DFU modeに

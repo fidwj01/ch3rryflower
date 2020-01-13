@@ -51,7 +51,7 @@ by @dora2_yuruyi
     - Patches are customizable. This makes it possible, for example, to debug via serial.
     - You can get the minimum patch by using the following script,
     ```
-    ./make_iBoot.sh <ipsw> -iv [iv] -k [key]
+    ./make_iBoot.sh <ipsw> -iv [iBoot IV] -k [iBoot Key]
     ```
     
     - *iOS 4.3.3*
