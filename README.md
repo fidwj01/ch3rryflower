@@ -30,11 +30,11 @@ by @dora2_yuruyi
 ## Vulnerabilities to use
 ### BootROM
 - limera1n
-	- BootROM exploit for run unsigned code via USB by geohot
+	- BootROM exploit for running unsigned code via USB by geohot
 - SHAtter
-	- BootROM exploit for run unsigned code via USB by posixninja and pod2g
+	- BootROM exploit for running unsigned code via USB by posixninja and pod2g
 - checkm8
-	- BootROM exploit for run unsigned code via USB by axi0mX
+	- BootROM exploit for running unsigned code via USB by axi0mX
 
 ### iBoot
 - De Rebus Antiquis
