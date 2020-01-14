@@ -119,6 +119,7 @@ bin/xpwntool iBSS* softdfu
 ./idevicererestore -r custom.ipsw
 ```
 
+# Notes
 ## Nature of this iBoot exploit
 ### nvram
 - This tool changes the nvram value and triggers an exploit. Therefore, if this tool is not properly released after use, the normal firmware will trigger a recovery mode.  
@@ -130,7 +131,7 @@ bin/xpwntool iBSS* softdfu
 ### iPhone 4s~iPhone 5c
 - Restore to iOS 9.3.5/10.3.4, and jailbreak, and execute "nvram -d boot-ramdisk" via terminal.  
 
-# About Downgrade Party Blobs (for iPhone 4s or later)
+## About Downgrade Party Blobs (for iPhone 4s or later)
 **Important notes about blobs acquired at the downgrade party in January 2018**
 
 - If you use my tool to restore with shsh2 using obtained by tsschecker, the baseband update process will be broken. These affected users are some of the users who acquired iOS 7 blobs at the downgrade party in January 2018.
@@ -141,11 +142,15 @@ bin/xpwntool iBSS* softdfu
 - Delete all items except "APTicket" and "LLB" related.
 - Change the extension back to ".shsh".
 
-# How to add device or version support
+## How to add device or version support
 - To add device support, you need to create an exploit. Exploit can be developed by using xerub's iloader [1].
 - There are two ways to add already supported device versions.
     - For iOS 7 and below, just add the ch3rryflower-specific options to the Odysseus Bundle to info.plist. See the existing bundle for details.
     - For iOS 8 or later, Odysseus kernel patch cannot be used because it is incomplete. Sandbox problem. An easy way is to patch sandbox mac policies to zero [3]. Add the tfp0 patch to the Odysseus patch and run sbpatcher [4] before applying the exploit.
+
+## Is jailbreak possible?
+- Jailbreak (untethered) is possible but not yet supported by this tool.  
+- In theory, it is possible to get untethered jailbreak on all versions.  
 
 # References
 [1] https://xerub.github.io/ios/iboot/2018/05/10/de-rebus-antiquis.html  
