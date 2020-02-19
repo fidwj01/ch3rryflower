@@ -6,6 +6,7 @@
 - iPhone 4s
 - iPhone 5
 - iPhone 5c
+- iPad 2 (iPad2,4)
 - iPad 3rd
 - iPod touch 5G
 
@@ -18,6 +19,7 @@
     - iPhone5,2 (Require iOS 7.x SHSH) - iOS 6.0 - 9.3.5
     - iPhone5,3 (Require iOS 7.1.x SHSH) - iOS 7.0 - 9.3.5
     - iPhone5,4 (Require iOS 7.1.x SHSH) - iOS 7.0 - 9.3.5
+    - iPad2,4 (Require iOS 7.x SHSH) - iOS 5.1 - 9.3.5 *checkm8 is not currently supported
     - iPad3,1 (Require iOS 7.1.x SHSH) - iOS 5.1 - 9.3.5 *checkm8 is not currently supported
     - iPad3,3 (Require iOS 7.1.x SHSH) - iOS 5.1 - 9.3.5 *checkm8 is not currently supported
     - iPod5,1 (Require iOS 7.1.x SHSH) - iOS 6.0 - 9.3.5 *checkm8 is not currently supported
