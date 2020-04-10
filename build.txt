@@ -1,0 +1,15 @@
+*cherry
+	cd cherry/
+	mkdir build
+	cd build
+	cmake ../xpwn
+	build ipsw
+
+*iPwneder32
+	cd idevice/iPwneder32
+	gcc exploit.c usb.c -I./ -lusb-1.0 -lcrypto -o pwnedDFU
+
+*sbpwn6
+	cd ios/kernel/sbpwn6
+	gcc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk -arch armv7 sbpwn6.c patchfinder.c sb_evaluate_hook.s sb_evaluate_trampoline.s -o sbpwn6
+	ldid -Stfp0.xml sbpwn6
