@@ -1,0 +1,10 @@
+[submodule "ios/kernel/sbpwn6"]
+	path = ios/kernel/sbpwn6
+	url = https://github.com/dora2-iOS/sbpwn6
+[submodule "idevice/iPwneder32"]
+	path = idevice/iPwneder32
+	url = https://github.com/dora2-iOS/iPwneder32
+[submodule "cherry/xpwn"]
+	path = cherry/xpwn
+	url = https://github.com/dora2-iOS/xpwn
+	branch = DRA
